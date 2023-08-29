@@ -1,0 +1,10 @@
+<div class="full">
+    <div class="left">
+        <button class="button_sidebar" routerLink="home" routerLinkActive="active"> Notes List</button>
+        <button class="button_sidebar" routerLink="add" routerLinkActive="active"> Add Notes</button>
+        <button class="button_sidebar" (click)="logout()"> Logout</button>
+    </div>
+    <div class="right">
+        <router-outlet></router-outlet>
+    </div>
+</div>

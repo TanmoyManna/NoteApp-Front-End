@@ -1,0 +1,25 @@
+<div class="card">
+    <h1>Login</h1>
+    <div>
+        <form [formGroup]="LoginForm">
+            <div class="form_group">
+                <label>User Name</label>
+                <input type="text" formControlName="userName"
+                    [ngClass]="{error:
+                    LoginForm.controls['userName'].touched && LoginForm.controls['userName'].hasError('required')}">
+            </div>
+            <div class="form_group">
+                <label>Password</label>
+                <div class="pass_input">
+                    <input type="password" formControlName="password"
+                        [ngClass]="{error:
+                        LoginForm.controls['password'].touched && LoginForm.controls['password'].hasError('required')}">
+                </div>
+            </div>
+            <div class="form_group">
+                <input type="submit" value="Sign In" (click)="login()">
+                <a routerLink="/signup">Sign Up</a>
+            </div>
+        </form>
+    </div>    
+</div>

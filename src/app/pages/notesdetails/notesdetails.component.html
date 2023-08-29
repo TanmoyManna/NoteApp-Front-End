@@ -1,0 +1,15 @@
+<div class="card">
+    <div class="form_sec">
+        <div class="form_group">
+            Title : {{noteDetail.title}}
+        </div>
+        <div class="form_group">
+            Content : {{noteDetail.content}}
+            
+        </div>
+        <div class="upload_sec" *ngIf="noteDetail.fileAttachment">
+            Upload Image :
+            <img class="preview_image" [src]="imageBaseURL+'notes/'+noteDetail.fileAttachment" alt="" />
+        </div>
+    </div>
+</div>

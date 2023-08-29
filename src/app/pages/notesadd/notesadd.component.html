@@ -1,0 +1,34 @@
+<div class="card">
+    <div class="form_sec">
+        <form [formGroup]="noteForm">
+            <div class="form_group">
+                <label>Title :</label>
+                <input type="text" formControlName="title" [ngClass]="{error:
+                    noteForm.controls['title'].touched && noteForm.controls['title'].hasError('required')}">
+            </div>
+            <div class="form_group">
+                <label>Content :</label>
+                <textarea type="text" formControlName="content"
+                    [ngClass]="{error:
+                    noteForm.controls['content'].touched && noteForm.controls['content'].hasError('required')}"></textarea>
+            </div>
+            <div class="upload_sec">
+                <div class="field_sec">
+                    <label>Upload Images</label>
+                    <input type="file" name="attachment" (change)="fileAdded($event)" />
+                </div>
+                <div class="previewImages" *ngIf="previewUploadedFiles">
+                    <div style="margin-right: 10px;">
+                        <mat-icon class="deleteIcon" (click)="deleteFiles()">remove_circle
+                        </mat-icon>
+                        <img class="preview_image" src="{{ previewUploadedFiles }}" alt="" />
+                    </div>
+                </div>
+            </div>
+
+        </form>
+    </div>
+    <div class="button_sec">
+        <button (click)="createNote()">Submit</button>
+    </div>
+</div>

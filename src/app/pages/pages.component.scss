@@ -1,0 +1,30 @@
+.full {
+    width: 98vw;
+    height: 98vh;
+    display: flex;
+
+    .left {
+        height: 100%;
+        width: 15%;
+        background: bisque;
+        border-right: 1px solid black;
+        display: flex;
+        flex-direction: column;
+        padding: 0px 20px;
+        .button_sidebar{
+            margin-top: 40px;
+
+            &.active{
+                background: red;
+            }
+        }
+    }
+
+
+    .right {
+
+        height: 100%;
+        width: 83%;
+        margin-left: 2%;
+    }
+}

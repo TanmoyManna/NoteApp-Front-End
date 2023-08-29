@@ -1,0 +1,39 @@
+<div class="card">
+    <h1>SignUp</h1>
+    <div>
+        <form [formGroup]="SignupForm">
+            <div class="form_group">
+                <label>User Name :</label>
+                <input type="text" formControlName="userName" [ngClass]="{error:
+                    SignupForm.controls['userName'].touched && SignupForm.controls['userName'].hasError('required')}">
+            </div>
+            <div class="form_group">
+                <label>Email :</label>
+                <input type="text" formControlName="email" [ngClass]="{error:
+                    SignupForm.controls['email'].touched && SignupForm.controls['email'].hasError('required')}">
+            </div>
+            <div class="form_group">
+                <label>Password :</label>
+                <div class="pass_input">
+                    <input type="password" formControlName="password"
+                        [ngClass]="{error:
+                        SignupForm.controls['password'].touched && SignupForm.controls['password'].hasError('required')}">
+                </div>
+            </div>
+            <div class="form_group">
+                <label>User Type :</label>
+                <div class="pass_input">
+                    <select formControlName="userType"
+                        [ngClass]="{error:
+                        SignupForm.controls['userType'].touched && SignupForm.controls['userType'].hasError('required')}">
+                        <option value="ADMIN">Admin</option>
+                        <option value="USER">Users</option>
+                    </select>
+                </div>
+            </div>
+            <div class="form_group">
+                <input type="submit" value="Sign Up" (click)="signup()">
+            </div>
+        </form>
+    </div>
+</div>

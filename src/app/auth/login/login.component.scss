@@ -1,0 +1,21 @@
+.card{
+    background-color: #fff;
+    height: 30rem;
+    width: 40rem;
+    margin: auto;
+    top: 20%;
+    position: relative;
+    border: 1px solid #2778c4;
+    border-radius: 6px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    .form_group{
+        display: flex;
+    }
+}
+.error {
+    border: 1px solid rgb(255, 0, 0) !important;
+    border-radius: 6px !important;
+}
